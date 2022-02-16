@@ -15,24 +15,59 @@ var map = L.map('map', {
 });
 
 var marcadorEscuelas = L.AwesomeMarkers.icon({
-  icon: 'recycle',
-  prefix:'fa',
-  markerColor: 'green',
-  iconColor: 'white'
-});
+    icon: 'recycle',
+    prefix:'fa',
+    markerColor: 'green',
+    iconColor: 'white'
+  });
 
-var recycle = L.marker([-31.6333294, -60.6900008], {icon:marcadorEscuelas});
-recycle.bindPopup("<h3>Puntos de Reciclaje</h3><p>Estación Belgrano</p>").openPopup();
 
-var overlay = L.layerGroup([recycle]).addTo(map);
+
+// urlGeoPuntos = "https://raw.githubusercontent.com/PedroCalasBlasco/munirepo/main/assets/json/ecopuntos.geojson";
+
+// let response = await fetch('https://raw.githubusercontent.com/PedroCalasBlasco/munirepo/main/assets/json/ecopuntos.geojson')
+//   .then(response => response.json())
+//   .then(featuresEcoPuntos => console.log(featuresEcoPuntos));
+
+//let layerEcoPuntos = L.geoJson(featuresEcoPuntos);
+
+var obj;
+let layerEcoPuntos;
 
 var baseMaps = {
     "Street Map" : osm,
     "Imagen": Esri_WorldImagery
 }
 
-var overlayMaps =  {
-    "<span style='color: green'>Reciclaje</span>": overlay,
-} 
 
-L.control.layers(baseMaps, overlayMaps).addTo(map);
+
+
+fetch('https://raw.githubusercontent.com/PedroCalasBlasco/munirepo/main/assets/json/ecopuntos.geojson')
+  .then(res => res.json())
+  .then(data => { 
+    
+    console.log(data);
+
+    let layerEcoPuntos = L.geoJson(data,{
+        onEachFeature: function(feature, layer){
+            layer.bindPopup("<h3>" + feature.properties.Name + "</h3>");
+            layer.setIcon(marcadorEscuelas);
+        }
+    });
+    map.addLayer(layerEcoPuntos);
+    console.log(layerEcoPuntos);
+    var overlay = L.layerGroup([layerEcoPuntos]).addTo(map);
+
+    var overlayMaps =  {
+        "<span style='color: green'>Reciclaje</span>": overlay,
+    }
+    
+    L.control.layers(baseMaps, overlayMaps).addTo(map);
+
+  });
+
+    
+
+// var recycle = L.marker([-31.6333294, -60.6900008], {icon:marcadorEscuelas});
+// recycle.bindPopup("<h3>Puntos de Reciclaje</h3><p>Estación Belgrano</p>").openPopup();
+
