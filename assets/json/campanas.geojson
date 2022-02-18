@@ -1,0 +1,21 @@
+{
+"type": "FeatureCollection",
+"name": "campanas",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id": 1, "nombre": "Mercado Norte", "descripcio": null }, "geometry": { "type": "Point", "coordinates": [ -60.710943999904394, -31.636098974087506 ] } },
+{ "type": "Feature", "properties": { "id": 2, "nombre": "Palacio Municipal", "descripcio": null }, "geometry": { "type": "Point", "coordinates": [ -60.712265059434884, -31.64974656109484 ] } },
+{ "type": "Feature", "properties": { "id": 3, "nombre": "Plaza de Las Paltas – Colastiné", "descripcio": null }, "geometry": { "type": "Point", "coordinates": [ -60.61004933881437, -31.619987426174653 ] } },
+{ "type": "Feature", "properties": { "id": 4, "nombre": "Costanera Este", "descripcio": null }, "geometry": { "type": "Point", "coordinates": [ -60.676700657824597, -31.637090609104039 ] } },
+{ "type": "Feature", "properties": { "id": 6, "nombre": "Espigón I y II", "descripcio": null }, "geometry": { "type": "Point", "coordinates": [ -60.665258198176076, -31.609096248365827 ] } },
+{ "type": "Feature", "properties": { "id": 7, "nombre": "Distrito Este Prado Español", "descripcio": null }, "geometry": { "type": "Point", "coordinates": [ -60.678179706662839, -31.611140024942294 ] } },
+{ "type": "Feature", "properties": { "id": 8, "nombre": "Distrito Noroeste La Tablada", "descripcio": null }, "geometry": { "type": "Point", "coordinates": [ -60.745772238570119, -31.56409282598792 ] } },
+{ "type": "Feature", "properties": { "id": 9, "nombre": "Jardín Botánico “Ing. L. Parodi”", "descripcio": null }, "geometry": { "type": "Point", "coordinates": [ -60.707532103152481, -31.586681935517305 ] } },
+{ "type": "Feature", "properties": { "id": 10, "nombre": "Shopping Puerto Plaza", "descripcio": null }, "geometry": { "type": "Point", "coordinates": [ -60.69994861638191, -31.646859054385633 ] } },
+{ "type": "Feature", "properties": { "id": 11, "nombre": "Club Azopardo", "descripcio": null }, "geometry": { "type": "Point", "coordinates": [ -60.686116148269768, -31.642969828235991 ] } },
+{ "type": "Feature", "properties": { "id": 12, "nombre": "IMUSA Parque Garay", "descripcio": null }, "geometry": { "type": "Point", "coordinates": [ -60.719051876717522, -31.633611482859532 ] } },
+{ "type": "Feature", "properties": { "id": 13, "nombre": "Reserva Natural Urbana del Oeste", "descripcio": null }, "geometry": { "type": "Point", "coordinates": [ -60.67522497046096, -31.636542688738928 ] } },
+{ "type": "Feature", "properties": { "id": 14, "nombre": "Estación La Guardia", "descripcio": null }, "geometry": { "type": "Point", "coordinates": [ -60.632184649268339, -31.64112774013746 ] } },
+{ "type": "Feature", "properties": { "id": 15, "nombre": "Escuela de Trabajo NIDO Barranquitas", "descripcio": null }, "geometry": { "type": "Point", "coordinates": [ -60.721169605735902, -31.626364143552173 ] } }
+]
+}
